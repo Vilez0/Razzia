@@ -4,13 +4,16 @@
   "connecting": "Verbinden...",
   "delete": "Löschen",
   "exit": "Beenden",
+  "exitFullscreen": "Vollbild beenden",
+  "fullscreen": "Vollbild",
   "language": {
     "de": "Deutsch - Deutsch",
     "en": "English - Englisch",
     "es": "Español - Spanisch",
     "fr": "Français - Französisch",
     "it": "Italiano - Italienisch",
-    "ja": "日本語 - Japanisch"
+    "ja": "日本語 - Japanisch",
+    "tr": "Türkçe - Türkisch"
   },
   "loading": "Laden...",
   "next": "Weiter",

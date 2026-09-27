@@ -3,6 +3,10 @@
   "addQuestion": "質問を追加",
   "answersCountSuffix": "件の回答",
   "deleteQuestion": "質問を削除",
+  "gameMode": {
+    "quiz": "クイズ",
+    "survey": "アンケート"
+  },
   "noQuestionYet": "まだ質問がありません",
   "question": {
     "addMediaHint": "質問に画像、動画、音声を追加できます",
@@ -38,11 +42,12 @@
     "mediaUrlPlaceholder": "URLを入力...",
     "placeholder": "質問を入力してください..."
   },
-  "quizzSaved": "クイズを保存しました",
-  "quizzUpdated": "クイズを更新しました",
+  "questionHasErrors": "この質問にはエラーがあります",
   "questionType": {
     "single": "単一選択",
     "multi": "複数選択"
   },
+  "quizzSaved": "クイズを保存しました",
+  "quizzUpdated": "クイズを更新しました",
   "titleQuizzPlaceholder": "クイズのタイトル..."
 }

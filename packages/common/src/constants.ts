@@ -1,7 +1,8 @@
+import type { GameSettings } from "@razzia/common/types/game"
+
 export const EVENTS = {
   GAME: {
     STATUS: "game:status",
-    SUCCESS_ROOM: "game:successRoom",
     SUCCESS_JOIN: "game:successJoin",
     TOTAL_PLAYERS: "game:totalPlayers",
     ERROR_MESSAGE: "game:errorMessage",
@@ -10,60 +11,57 @@ export const EVENTS = {
     RESET: "game:reset",
     UPDATE_QUESTION: "game:updateQuestion",
     PLAYER_ANSWER: "game:playerAnswer",
-    CREATE: "game:create",
   },
   PLAYER: {
     SUCCESS_RECONNECT: "player:successReconnect",
     UPDATE_LEADERBOARD: "player:updateLeaderboard",
-    JOIN: "player:join",
     LOGIN: "player:login",
     RECONNECT: "player:reconnect",
     LEAVE: "player:leave",
     SELECTED_ANSWER: "player:selectedAnswer",
-    CHECK_PIN: "player:checkPin",
-    CHECK_PIN_RESULT: "player:checkPinResult",
   },
   MANAGER: {
     SUCCESS_RECONNECT: "manager:successReconnect",
-    CONFIG: "manager:config",
-    GAME_CREATED: "manager:gameCreated",
     STATUS_UPDATE: "manager:statusUpdate",
     NEW_PLAYER: "manager:newPlayer",
     REMOVE_PLAYER: "manager:removePlayer",
-    ERROR_MESSAGE: "manager:errorMessage",
     PLAYER_KICKED: "manager:playerKicked",
-    AUTH: "manager:auth",
     RECONNECT: "manager:reconnect",
     LEAVE: "manager:leave",
     KICK_PLAYER: "manager:kickPlayer",
     START_GAME: "manager:startGame",
-    ABORT_QUIZ: "manager:abortQuiz",
-    NEXT_QUESTION: "manager:nextQuestion",
-    SHOW_LEADERBOARD: "manager:showLeaderboard",
-    GET_CONFIG: "manager:getConfig",
-    LOGOUT: "manager:logout",
-    UNAUTHORIZED: "manager:unauthorized",
+    ADVANCE: "manager:advance",
+    AUTO_ADVANCE: "manager:autoAdvance",
+    SET_LOCK: "manager:setLock",
+    LOCK_UPDATED: "manager:lockUpdated",
   },
-  QUIZZ: {
-    GET: "quizz:get",
-    DATA: "quizz:data",
-    SAVE: "quizz:save",
-    SAVE_SUCCESS: "quizz:saveSuccess",
-    UPDATE: "quizz:update",
-    UPDATE_SUCCESS: "quizz:updateSuccess",
-    DELETE: "quizz:delete",
-    ERROR: "quizz:error",
-  },
-  RESULTS: {
-    GET: "results:get",
-    DATA: "results:data",
-    DELETE: "results:delete",
-  },
+} as const
+
+export const SESSION_ROLES = {
+  PLAYER: "player",
+  MANAGER: "manager",
 } as const
 
 export const NO_TIME_LIMIT = -1
 
+export const AUTO_ADVANCE_DELAY = { MIN: 3, MAX: 600 } as const
+
+export const createDefaultGameSettings = (): GameSettings => ({
+  generatedUsernames: false,
+  answersOnly: false,
+  autoAdvance: {
+    enable: false,
+    responsesDelay: 10,
+    leaderboardDelay: 5,
+  },
+})
+
 export const MAX_POINTS = 1000
+
+export const QUIZZ_MODES = {
+  QUIZ: "quiz",
+  SURVEY: "survey",
+} as const
 
 export const QUESTION_TYPES = {
   SINGLE: "single",
@@ -83,6 +81,7 @@ export const MEDIA_TYPES = {
 } as const
 
 export const EXAMPLE_QUIZZ = {
+  gameMode: QUIZZ_MODES.QUIZ,
   subject: "Example Quizz",
   questions: [
     {

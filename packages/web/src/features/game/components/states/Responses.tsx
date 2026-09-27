@@ -17,7 +17,7 @@ interface Props {
 const Responses = ({
   data: { question, answers, responses, solutions },
 }: Props) => {
-  const [percentages, setPercentages] = useState<Record<string, string>>({})
+  const percentages = calculatePercentages(responses)
   const [isMusicPlaying, setIsMusicPlaying] = useState(false)
 
   const [sfxResults] = useSound(SFX.RESULTS_SOUND, {
@@ -37,8 +37,6 @@ const Responses = ({
   useEffect(() => {
     stopMusic()
     sfxResults()
-
-    setPercentages(calculatePercentages(responses))
   }, [responses, playMusic, stopMusic, sfxResults])
 
   useEffect(() => {
@@ -85,11 +83,10 @@ const Responses = ({
             <AnswerButton
               key={key}
               className={clsx(ANSWERS_COLORS[key], {
-                // oxlint-disable-next-line typescript/no-unnecessary-condition
-                "opacity-65": responses && !solutions.includes(key),
+                "opacity-65": solutions && !solutions.includes(key),
               })}
               label={ANSWERS_LABELS[key]}
-              correct={solutions.includes(key)}
+              correct={solutions ? solutions.includes(key) : undefined}
             >
               {answer}
             </AnswerButton>

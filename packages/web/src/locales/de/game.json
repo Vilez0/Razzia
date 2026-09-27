@@ -1,16 +1,28 @@
 {
+  "answerNoted": "Danke, notiert",
+  "confirm": "Bestätigen",
   "correct": "Richtig!",
   "gamePinLabel": "Spiel-PIN:",
+  "generatedUsernameNotice": "Du bekommst beim Beitreten einen zufälligen Spitznamen.",
   "hud": {
     "answers": "Antworten",
     "time": "Zeit"
   },
+  "media": {
+    "showImage": "Bild anzeigen",
+    "showVideo": "Video anzeigen"
+  },
+  "question": {
+    "show": "Frage anzeigen"
+  },
   "joinInstruction": "Tritt dem Spiel bei auf",
   "leaderboard": "Bestenliste",
+  "lock": {
+    "lock": "Raum sperren",
+    "unlock": "Raum entsperren"
+  },
   "pinLabel": "PIN-Code",
-  "reconnect": "Erneut verbinden",
-  "reconnectTitle": "Du warst in einem Spiel",
-  "playersJoined": "Verbundene Spieler: ",
+  "playersJoined": "Verbundene Spieler",
   "questionPrefix": "Frage #",
   "rank": {
     "1": "1. Platz",
@@ -19,12 +31,35 @@
     "other": "{{rank}}. Platz"
   },
   "rankSuffix": ". Platz",
+  "reconnect": "Erneut verbinden",
+  "reconnectTitle": "Du warst in einem Spiel",
   "resultBehind": ", hinter ",
   "resultTop": "Du hast ",
-  "startGame": "Spiel starten",
+  "settings": {
+    "autoAdvance": {
+      "hint": "Nach der Auflösung und der Rangliste von selbst weitergehen.",
+      "label": "Automatisch weiter",
+      "leaderboardDelay": "Rangliste",
+      "responsesDelay": "Ergebnis"
+    },
+    "generatedUsernames": {
+      "label": "Spitznamen generieren",
+      "hint": "Spieler wählen aus generierten Namen, statt selbst zu tippen."
+    },
+    "answersOnly": {
+      "label": "Nur Antworten",
+      "hint": "Die Spieler sehen nur die Antwortknöpfe, mit einem Knopf, um die Frage erneut zu lesen."
+    },
+    "title": "Spieleinstellungen"
+  },
+  "startGame": "Starten",
+  "summary": {
+    "title": "Umfrage beendet",
+    "participants": "Teilnehmer",
+    "questions": "Fragen"
+  },
   "usernamePlaceholder": "Benutzername hier",
   "waitingForAnswers": "Warten auf die Antworten der Spieler",
   "waitingForPlayers": "Warten auf Spieler",
-  "wrong": "Schade",
-  "confirm": "Bestätigen"
+  "wrong": "Schade"
 }

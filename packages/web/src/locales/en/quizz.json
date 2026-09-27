@@ -3,6 +3,10 @@
   "addQuestion": "Add question",
   "answersCountSuffix": " answers",
   "deleteQuestion": "Delete question",
+  "gameMode": {
+    "quiz": "Quiz",
+    "survey": "Survey"
+  },
   "noQuestionYet": "No question yet",
   "question": {
     "addMediaHint": "Add an image, video or audio to your question",
@@ -38,11 +42,12 @@
     "mediaUrlPlaceholder": "Enter URL...",
     "placeholder": "Start typing your question..."
   },
-  "quizzSaved": "Quizz saved successfully",
-  "quizzUpdated": "Quizz updated successfully",
+  "questionHasErrors": "This question has errors",
   "questionType": {
     "single": "Single choice",
     "multi": "Multiple choice"
   },
+  "quizzSaved": "Quizz saved successfully",
+  "quizzUpdated": "Quizz updated successfully",
   "titleQuizzPlaceholder": "Quizz title..."
 }
